@@ -1,4 +1,3 @@
-// Shamely inspiered by ThreeJS FBX loader: https://threejs.org/examples/webgl_loader_fbx.html
 import {
     AssetContainer,
     Bone,
@@ -43,8 +42,6 @@ export interface IFBXLoaderRuntime {
 
     connections: Map<number, IFBXConnections>;
 
-    writeTextures: boolean;
-
     cachedModels: INumberDictionary<TransformNode | Bone>;
     cachedGeometries: INumberDictionary<IFBXGeometryResult>;
     cachedSkeletons: INumberDictionary<IFBXSkeleton>;
@@ -66,11 +63,7 @@ export class FBXLoader implements ISceneLoaderPluginAsync {
         },
     };
 
-    /**
-     * Constructor.
-     * @param writeTextures definess wether or not texture should be written on disk or converted as blob Urls.
-     */
-    public constructor(public writeTextures: boolean = true) {
+    public constructor() {
         // Empty for now...
     }
 
@@ -203,8 +196,6 @@ export class FBXLoader implements ISceneLoaderPluginAsync {
             objects,
             deformers,
             geometries,
-
-            writeTextures: this.writeTextures,
 
             cachedModels: {},
             cachedSkeletons: {},
