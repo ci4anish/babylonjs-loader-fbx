@@ -26,11 +26,11 @@ This will allow you to import it using:
 
 ```bash
 import { FBXLoader } from 'babylon-fbx-loader';
-import { SceneLoader } from "@babylonjs/core"
+import { SceneLoader } from "@babylonjs/core";
 
 SceneLoader.RegisterPlugin(new FBXLoader());
 
-await SceneLoader.ImportMeshAsync(null, 'path/to', 'filename.fbx', scene)
+await SceneLoader.ImportMeshAsync(null, 'path/to', 'filename.fbx', scene);
 ```
 
 ### YARN
