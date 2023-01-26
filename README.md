@@ -12,6 +12,10 @@ After the import you can access to FBXLoaderModule global object and use it like
 
 ```bash
 BABYLON.SceneLoader.RegisterPlugin(new FBXLoaderModule.FBXLoader());
+
+...
+
+await BABYLON.SceneLoader.ImportMeshAsync(null, 'path/to', 'filename.fbx', scene);
 ```
 
 ### NPM
@@ -29,6 +33,8 @@ import { FBXLoader } from 'babylon-fbx-loader';
 import { SceneLoader } from "@babylonjs/core";
 
 SceneLoader.RegisterPlugin(new FBXLoader());
+
+...
 
 await SceneLoader.ImportMeshAsync(null, 'path/to', 'filename.fbx', scene);
 ```
