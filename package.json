@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Fbx loader for the babylon.js application",
   "private": false,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "devDependencies": {
     "@babylonjs/core": "^5.40.0",
     "@types/path-browserify": "^1.0.0",
@@ -23,8 +25,13 @@
   "license": "ISC",
   "scripts": {
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare" : "npm run build",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint --ext .tsx,.ts,.js src/",
     "lint:fix": "eslint --ext .tsx,.ts,.js src/ --fix"
-  }
+  },
+  "files": ["lib/**/*"]
 }
