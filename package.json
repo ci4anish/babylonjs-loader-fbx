@@ -25,6 +25,7 @@
   "license": "ISC",
   "scripts": {
     "build": "tsc",
+    "build:cdn": "npx webpack --mode production",
     "prepare" : "npm run build",
     "preversion" : "npm run lint",
     "version" : "npm run format && git add -A src",
