@@ -21,7 +21,7 @@ npm i babylon-fbx-loader
 This will allow you to import it using:
 
 ```bash
-import { FBXLoader } from 'babylonjs';
+import { FBXLoader } from 'babylon-fbx-loader';
 
 BABYLON.SceneLoader.RegisterPlugin(new FBXLoader());
 ```
