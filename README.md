@@ -47,5 +47,5 @@ yarn add babylon-fbx-loader
 
 The loader is in the pretty raw state, but if you need static meshes rather than dynamic it can give pretty decent results:
 
-![Carriage image](https://metameta-libs.s3.eu-central-1.amazonaws.com/carriage.png)
-![Formula 1 image](https://metameta-libs.s3.eu-central-1.amazonaws.com/formula-1.png)
+<img src="https://metameta-libs.s3.eu-central-1.amazonaws.com/carriage.png" alt="Carriage image" width="300"/>
+<img src="https://metameta-libs.s3.eu-central-1.amazonaws.com/formula-1.png" alt="Formula 1 image" width="300"/>
