@@ -26,7 +26,7 @@ import { FBXMesh } from './mesh/mesh';
 import { FBXSkeleton, IFBXSkeleton } from './mesh/skeleton';
 import { FBXTransform } from './node/transform';
 
-const root = typeof self !== "undefined" ? self : typeof global !== "undefined" ? global : this;
+const root = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : this;
 // @ts-ignore
 root.Buffer = BrowserBuffer.Buffer;
 
