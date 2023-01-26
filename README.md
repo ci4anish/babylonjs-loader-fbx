@@ -12,7 +12,7 @@ BABYLON.SceneLoader.RegisterPlugin(new FBXLoaderModule.FBXLoader());
 
 ## NPM
 
-babylon-fbx-loader is published on npm with full typing support. To install, use:
+To install va npm package manager use:
 
 ```bash
 npm i babylon-fbx-loader
@@ -25,3 +25,17 @@ import { FBXLoader } from 'babylon-fbx-loader';
 
 BABYLON.SceneLoader.RegisterPlugin(new FBXLoader());
 ```
+
+## YARN
+
+Additionally, you can install with yarn:
+
+```bash
+yarn add babylon-fbx-loader
+```
+
+## Known issues:
+* mainly supports geometries, bones
+* partially supports materials (only standard material and no video support at the moment)
+* no support of morph targets
+* no support of cameras and lights
