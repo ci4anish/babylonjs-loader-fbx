@@ -15,5 +15,8 @@
     "webpack-cli": "^5.0.1"
   },
   "author": "Taras Pohoretskyi",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "build" : "tsc"
+  }
 }
