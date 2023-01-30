@@ -4,8 +4,8 @@
     "noImplicitAny": false,
     "declaration": true,
     "strict": true,
-    "module": "es6",
-    "target": "es5",
-    "moduleResolution": "node"
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node",
   }
 }
