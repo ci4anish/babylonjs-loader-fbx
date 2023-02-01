@@ -155,7 +155,7 @@ export class FBXLoader implements ISceneLoaderPluginAsync {
                 fbx = parseText(Buffer.from(data).toString('utf-8'));
             } catch (e) {
                 Logger.Error(`Can't parse FBX file. format is unknown or unsupported.`);
-                return result;
+                throw new Error(`Can't parse FBX file. format is unknown or unsupported.`);
             }
         }
 
