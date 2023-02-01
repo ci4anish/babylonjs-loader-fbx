@@ -154,7 +154,6 @@ export class FBXLoader implements ISceneLoaderPluginAsync {
                 // try text file encoding
                 fbx = parseText(Buffer.from(data).toString('utf-8'));
             } catch (e) {
-                Logger.Error(`Can't parse FBX file. format is unknown or unsupported.`);
                 throw new Error(`Can't parse FBX file. format is unknown or unsupported.`);
             }
         }
@@ -164,10 +163,9 @@ export class FBXLoader implements ISceneLoaderPluginAsync {
         // Check version first
         const version = reader.node('FBXHeaderExtension')?.node('FBXVersion')?.prop(0, 'number') ?? 0;
         if (version < 7000) {
-            Logger.Warn(
+            throw new Error(
                 `Can't parse FBX: version (${version}) not supported. FBX Loader supports versions >= 7000.`,
             );
-            return result;
         }
 
         // Build data
