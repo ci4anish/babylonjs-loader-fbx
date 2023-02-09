@@ -1,6 +1,6 @@
 {
   "name": "babylonjs-loader-fbx",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Fbx loader for the babylon.js application",
   "private": false,
   "main": "lib/index.js",
