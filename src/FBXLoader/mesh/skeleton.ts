@@ -1,4 +1,8 @@
-import { AbstractMesh, Bone, Matrix, Scene, Skeleton } from '@babylonjs/core';
+import { Bone } from '@babylonjs/core/Bones/bone';
+import { Skeleton } from '@babylonjs/core/Bones/skeleton';
+import { Matrix } from '@babylonjs/core/Maths/math.vector';
+import { AbstractMesh } from '@babylonjs/core/Meshes/abstractMesh';
+import { Scene } from '@babylonjs/core/scene';
 import { FBXReaderNode } from 'fbx-parser';
 
 import { IFBXConnections } from '../connections';

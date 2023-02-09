@@ -1,4 +1,7 @@
-import { Color3, Scene, StandardMaterial, Texture } from '@babylonjs/core';
+import { StandardMaterial } from '@babylonjs/core/Materials/standardMaterial';
+import { Texture } from '@babylonjs/core/Materials/Textures/texture';
+import { Color3 } from '@babylonjs/core/Maths/math.color';
+import { Scene } from '@babylonjs/core/scene';
 import { FBXReaderNode } from 'fbx-parser';
 import { basename, extname, join } from 'path-browserify';
 

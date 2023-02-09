@@ -1,14 +1,9 @@
-import {
-    FloatArray,
-    Geometry,
-    Matrix,
-    Nullable,
-    Scene,
-    Tools,
-    Vector3,
-    Vector4,
-    VertexData,
-} from '@babylonjs/core';
+import { Matrix, Vector3, Vector4 } from '@babylonjs/core/Maths/math.vector';
+import { Geometry } from '@babylonjs/core/Meshes/geometry';
+import { VertexData } from '@babylonjs/core/Meshes/mesh.vertexData';
+import { Tools } from '@babylonjs/core/Misc/tools';
+import { Scene } from '@babylonjs/core/scene';
+import { FloatArray, Nullable } from '@babylonjs/core/types';
 import { FBXReaderNode } from 'fbx-parser';
 
 import { INumberDictionary, Undefinable } from '../interfaces';

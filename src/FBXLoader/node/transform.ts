@@ -1,4 +1,7 @@
-import { Bone, Quaternion, Tools, TransformNode, Vector3 } from '@babylonjs/core';
+import { Bone } from '@babylonjs/core/Bones/bone';
+import { Quaternion, Vector3 } from '@babylonjs/core/Maths/math.vector';
+import { TransformNode } from '@babylonjs/core/Meshes/transformNode';
+import { Tools } from '@babylonjs/core/Misc/tools';
 import { FBXReaderNode } from 'fbx-parser';
 
 import { FBXUtils } from '../utils';

@@ -1,16 +1,5 @@
-import {
-    AssetContainer,
-    Bone,
-    ISceneLoaderAsyncResult,
-    ISceneLoaderPluginAsync,
-    ISceneLoaderPluginExtensions,
-    ISceneLoaderProgressEvent,
-    Logger,
-    Material,
-    Nullable,
-    Scene,
-    TransformNode,
-} from '@babylonjs/core';
+import { AssetContainer } from '@babylonjs/core/assetContainer';
+import { Scene } from '@babylonjs/core/scene';
 import * as BrowserBuffer from 'buffer/';
 import { FBXData, FBXReader, FBXReaderNode, parseText } from 'fbx-parser';
 
@@ -24,6 +13,16 @@ import { FBXGeometry, IFBXGeometryResult } from './mesh/geometry';
 import { FBXMesh } from './mesh/mesh';
 import { FBXSkeleton, IFBXSkeleton } from './mesh/skeleton';
 import { FBXTransform } from './node/transform';
+import { Bone } from '@babylonjs/core/Bones/bone';
+import { TransformNode } from '@babylonjs/core/Meshes/transformNode';
+import { Material } from '@babylonjs/core/Materials/material';
+import {
+    ISceneLoaderAsyncResult,
+    ISceneLoaderPluginAsync,
+    ISceneLoaderPluginExtensions,
+    ISceneLoaderProgressEvent,
+} from '@babylonjs/core/Loading/sceneLoader';
+import { Nullable } from '@babylonjs/core/types';
 
 const root = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : this;
 // @ts-ignore

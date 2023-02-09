@@ -1,4 +1,7 @@
-import { Material, Mesh, MultiMaterial, SubMesh } from '@babylonjs/core';
+import { Material } from '@babylonjs/core/Materials/material';
+import { MultiMaterial } from '@babylonjs/core/Materials/multiMaterial';
+import { Mesh } from '@babylonjs/core/Meshes/mesh';
+import { SubMesh } from '@babylonjs/core/Meshes/subMesh';
 import { FBXReaderNode } from 'fbx-parser';
 
 import { IFBXConnections } from '../connections';

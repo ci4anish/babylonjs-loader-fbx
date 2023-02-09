@@ -1,15 +1,9 @@
-import {
-    Animation,
-    AnimationGroup,
-    Tools as BabylonTools,
-    Bone,
-    Matrix,
-    Node,
-    Quaternion,
-    Tools,
-    TransformNode,
-    Vector3,
-} from '@babylonjs/core';
+import { AnimationGroup } from '@babylonjs/core/Animations/animationGroup';
+import { Bone } from '@babylonjs/core/Bones/bone';
+import { Animation } from '@babylonjs/core/Animations/animation';
+import { Matrix, Quaternion, Vector3 } from '@babylonjs/core/Maths/math.vector';
+import { TransformNode } from '@babylonjs/core/Meshes/transformNode';
+import { Tools } from '@babylonjs/core/Misc/tools';
 import { FBXReaderNode } from 'fbx-parser';
 
 import { IFBXConnections } from '../connections';
@@ -98,7 +92,7 @@ export class FBXAnimations {
     private static _AddClip(
         animationGroup: AnimationGroup,
         layer: IFBXLayerCurve,
-        cachedModels: INumberDictionary<Node>,
+        cachedModels: INumberDictionary<TransformNode | Bone>,
         cachedSkeletons: INumberDictionary<IFBXSkeleton>,
     ): void {
         // Check targets
@@ -153,17 +147,17 @@ export class FBXAnimations {
 
             if (curves.x) {
                 this._InterpolateRotations(curves.x);
-                curves.x.values = curves.x.values.map((v) => BabylonTools.ToRadians(v));
+                curves.x.values = curves.x.values.map((v) => Tools.ToRadians(v));
             }
 
             if (curves.y) {
                 this._InterpolateRotations(curves.y);
-                curves.y.values = curves.y.values.map((v) => BabylonTools.ToRadians(v));
+                curves.y.values = curves.y.values.map((v) => Tools.ToRadians(v));
             }
 
             if (curves.z) {
                 this._InterpolateRotations(curves.z);
-                curves.z.values = curves.z.values.map((v) => BabylonTools.ToRadians(v));
+                curves.z.values = curves.z.values.map((v) => Tools.ToRadians(v));
             }
 
             const rotationTimes = this._GetTimes(curves);
@@ -408,7 +402,7 @@ export class FBXAnimations {
     private static _ParseAnimationLayers(
         objects: FBXReaderNode,
         connections: Map<number, IFBXConnections>,
-        cachedModels: INumberDictionary<Node>,
+        cachedModels: INumberDictionary<TransformNode | Bone>,
         cachedSkeletons: INumberDictionary<IFBXSkeleton>,
         curveNodesMap: Map<number, IFBXAnimationRawCurveNode>,
     ): Map<number, IFBXLayerCurve[]> {
@@ -522,7 +516,7 @@ export class FBXAnimations {
      */
     private static _GetTargets(
         id: number,
-        cachedModels: INumberDictionary<Node>,
+        cachedModels: INumberDictionary<TransformNode | Bone>,
         cachedSkeletons: INumberDictionary<IFBXSkeleton>,
     ): (TransformNode | Bone)[] {
         const target = cachedModels[id];

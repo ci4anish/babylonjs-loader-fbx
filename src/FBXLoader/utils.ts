@@ -1,5 +1,4 @@
-import { Matrix, Quaternion, Vector3 } from '@babylonjs/core';
-
+import { Matrix, Quaternion, Vector3 } from '@babylonjs/core/Maths/math.vector';
 import { IFBXTransformData } from './node/transform';
 
 export class FBXUtils {
